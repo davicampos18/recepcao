@@ -11,24 +11,24 @@ SCOPES = [
 ]
 
 # Para o Vercel
-# creds_json = os.getenv("GOOGLE_CREDENTIALS")
-# creds_dict = json.loads(creds_json)
+creds_json = os.getenv("GOOGLE_CREDENTIALS")
+creds_dict = json.loads(creds_json)
 
-# credentials = Credentials.from_service_account_info(
-#     creds_dict,
-#     scopes=SCOPES
-# )
+credentials = Credentials.from_service_account_info(
+    creds_dict,
+    scopes=SCOPES
+)
 
 # Máquina Local
 
-service_account_file = "/home/davi_campos/Downloads/ebdrodoviaa-main/exalted-ability-436015-e8-1659de34e562.json"
+# service_account_file = "/home/davi_campos/Downloads/ebdrodoviaa-main/exalted-ability-436015-e8-1659de34e562.json"
 
-scopes = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive",
-]
+# scopes = [
+#     "https://www.googleapis.com/auth/spreadsheets",
+#     "https://www.googleapis.com/auth/drive",
+# ]
 
-credentials = Credentials.from_service_account_file(service_account_file, scopes=scopes)
+# credentials = Credentials.from_service_account_file(service_account_file, scopes=scopes)
 
 gc = gspread.authorize(credentials)
 spreadsheet = gc.open("Escala da Recepção")
