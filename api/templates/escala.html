@@ -77,13 +77,18 @@
             margin-top: 40px;
             text-align: center;
         }
+        .logo2 {
+            width: 80%;
+            max-width: 85%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
         <!-- Footer -->
     <footer>
         <br>
-        <img src="https://i.imgur.com/RqAFF8g.png" alt="Imagem Recepção">
+        <img src="https://i.imgur.com/RqAFF8g.png" alt="Imagem Recepção" class="logo2">
         <br>
         <br>
     </footer>
@@ -100,9 +105,8 @@
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -110,7 +114,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -124,8 +127,7 @@
                     <thead>
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -135,7 +137,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -149,8 +150,7 @@
                     <thead>
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -160,7 +160,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -174,8 +173,7 @@
                     <thead>
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -185,7 +183,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -200,7 +197,6 @@
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -210,7 +206,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -224,8 +219,7 @@
                     <thead>
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -235,7 +229,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -249,8 +242,7 @@
                     <thead>
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -260,7 +252,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -274,8 +265,7 @@
                     <thead>
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -285,7 +275,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -299,8 +288,7 @@
                     <thead>
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -310,7 +298,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -324,8 +311,7 @@
                     <thead>
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -335,7 +321,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -349,8 +334,7 @@
                     <thead>
                         <tr>
                             <th style="background-color:#143a66; color: #91c4f6;">Data</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Dia</th>
-                            <th style="background-color:#143a66; color: #91c4f6;">Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 1</th>
                             <th style="background-color:#143a66; color: #91c4f6;">Recep 2</th>
                         </tr>
@@ -360,7 +344,6 @@
                         <tr>
                             <td>{{ row['Data'] }}</td>
                             <td>{{ row['Dia da Semana'] }}</td>
-                            <td>{{ row['Tipo de Culto'] }}</td>
                             <td>{{ row['Recepcionista 1'] }}</td>
                             <td>{{ row['Recepcionista 2'] }}</td>
                         </tr>
@@ -368,8 +351,6 @@
                     </tbody>
                 </table>
             </div>
-
-
         </div>
         <br><br>
     </div>
