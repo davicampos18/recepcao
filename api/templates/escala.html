@@ -25,7 +25,9 @@
         th {
             background-color: #91c4f6;
             text-align: center;
-            white-space: nowrap; /* Sem quebra de linha nos cabeçalhos */
+            word-wrap: break-word;
+            white-space: normal; /* Permite quebra de linha nas células do corpo */
+            word-break: break-word; /* Adiciona quebras para palavras muito longas */
         }
         td {
             background-color: #91c4f6;
@@ -80,12 +82,8 @@
     </style>
 </head>
 <body>
-    <!-- Schedule Section -->
-    <br>
-    <footer>
         <img src="https://i.imgur.com/RqAFF8g.png" alt="Imagem Recepção"  class="logo">
         <br>
-    </footer>
     <h1 style="color: #143a66;" class="titulo">Escala Anual</h1>
     <div class="container custom-container">
         <div class="schedule-container">
