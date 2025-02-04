@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBD Rodovia A</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/H94JYRc.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #91c4f6;
+        }
+        .table-container {
+            background-color: #91c4f6;
+            padding: 0px;
+            border-radius: 8px;
+            margin: 0 auto;
+            width: auto;
+        }
+        table {
+            width: 100%;
+            table-layout: auto;
+            background-color: #91c4f6;
+        }
+        th {
+            background-color: #91c4f6;
+            text-align: center;
+            white-space: nowrap; /* Sem quebra de linha nos cabeçalhos */
+        }
+        td {
+            background-color: #91c4f6;
+            text-align: center;
+            word-wrap: break-word;
+            white-space: normal; /* Permite quebra de linha nas células do corpo */
+            word-break: break-word; /* Adiciona quebras para palavras muito longas */
+        }
+        /* Estilo para as colunas específicas (1ª e 3ª colunas) */
+        td:nth-child(1), td:nth-child(3), th:nth-child(1), th:nth-child(3) {
+            white-space: nowrap; /* Impede quebra de linha */
+        }
+
+        /* Estilo para as outras colunas */
+        td:not(:nth-child(1)):not(:nth-child(3)) {
+            white-space: normal; /* Permite quebra de linha */
+            word-break: break-word; /* Adiciona quebras para palavras muito longas */
+        }
+        footer {
+            bottom: 0;
+            width: 100%;
+            background-color: #91c4f6;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #143a66;
+        }
+        .custom-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 31%;
+            max-width: 40%;
+            height: auto;
+        }
+        .titulo {
+            align-items: center;
+            text-align: center;
+        }
+        .legenda-board {
+            background-color: #ffffff;
+            border: 2px dashed #2b2e28;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 95%;
+            max-width: 95%;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Schedule Section -->
+    <br>
+    <footer>
+        <img src="https://i.imgur.com/RqAFF8g.png" alt="Imagem Recepção"  class="logo">
+        <br>
+    </footer>
+    <h1 style="color: #143a66;" class="titulo">Escala Anual</h1>
+    <div class="container custom-container">
+        <div class="schedule-container">
+       
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;"  class="text-center mb-3">Fevereiro</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in fevereiro %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Março</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in marco %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Abril</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in abril %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Maio</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in maio %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Junho</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in junho %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Julho</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in julho %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Agosto</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in agosto %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Setembro</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in setembro %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Outubro</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in outubro %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Novembro</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in novembro %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <h3 style="background-color:#143a66; color: #91c4f6;" class="text-center mb-3">Dezembro</h3>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th style="background-color:#143a66; color: #91c4f6;">Data</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Dia da Semana</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Tipo de Culto</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 1</th>
+                            <th style="background-color:#143a66; color: #91c4f6;">Recepcionista 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in dezembro %}
+                        <tr>
+                            <td>{{ row['Data'] }}</td>
+                            <td>{{ row['Dia da Semana'] }}</td>
+                            <td>{{ row['Tipo de Culto'] }}</td>
+                            <td>{{ row['Recepcionista 1'] }}</td>
+                            <td>{{ row['Recepcionista 2'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+        <br><br>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <img src="https://i.imgur.com/UspVkDW.png" alt="Logo Davi Campos"  class="logo">
+        <img src="https://i.imgur.com/aVzWkCT.png" alt="Logo Igreja"  class="logo">
+        <br>
+        <br>
+        <p>Davi Campos - Recepção © {{ year }}</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
